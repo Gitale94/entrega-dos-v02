@@ -1,0 +1,198 @@
+/*RESET*/
+
+* {
+    /* El '*' hace que se aplique a TODOS los html linkeados a este CSS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*=============== ESTILOS GENERALES ===================================*/
+/* al NO tener el '.' ANTES del Nombre hace que se APLIQUE en TODOS los  BODYS */
+body {
+    background-color: rgb(214, 200, 226);
+}
+
+/*--------------- ESTILOS del HEADER -----------------------------------*/
+/* al NO tener el '.' ANTES del Nombre hace que se APLIQUE en TODOS los HEADERS */
+header {
+    background-color: rgb(219, 156, 156);
+    display: flex;
+    /* coloca el menu al lado del logo */
+    justify-content: space-between;
+    /* el logo va a la izquierda y el menu a la derecha */
+    align-items: center;
+    /* centra el contenido del menu, sino se "pega" al borde de arriba */
+
+
+}
+
+header img {
+    width: 15%;
+    /* es el tamaño del logo */
+}
+
+.header-nav-ul {
+    list-style: none;
+    /* NO LO HACE */
+    color: black;
+    /* TAMPOCO LO HACE */
+    display: flex;
+    /*NO LO ESTA HACIENDO !!! DEBERIAN ESTAR EN LA MISMA FILA*/
+    gap: 15 px;
+    /* DEBERIA SEPARARME LAS PALABRAS PERO NO LO ESTA HACIENDO !!!!!!!! */
+    padding-right: 25px;
+    /* es la separacion de la ultima letra respecto del margen derecho*/
+    /*EL padding es el unico que me lo toma */
+    flex-direction: row;
+    /*TAMPOCO LO HACE */
+}
+
+/*--------------- ESTILOS del MAIN --------------------------------------*/
+/*------APLICABLES PARA "only-murders-uno.html"--------------------------------*/
+main {
+    flex-wrap: wrap;
+    /*asi se adapta a pantallas pequeñas */
+    margin-top: 1.5%;
+}
+
+main.textos {
+    text-align: center;
+    /*NO SE SI LO APLICA */
+
+}
+
+section {
+    /*Es la Etiqueta PADRE */
+    display: flex;
+    padding: 20px;
+    font-size: large;
+}
+
+section div {
+    text-align: justify;
+    align-content: center;
+}
+
+section div img {
+    align-content: center;
+    border-radius: 20px;
+    height: 80%;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+.imagen {
+    text-align: center;
+}
+
+/* Texto al lado de la imagen en el index */
+.titulo {
+    text-align: center;
+    color: black;
+    font: bold
+}
+
+.intro-a-la-nota {
+    text-align: center;
+    font-style: italic;
+    font-size: large;
+    font-weight: bold;
+}
+
+.fuente-fuente {
+    text-align: center;
+    font-size: small;
+}
+
+.texto-de-la-nota {
+    text-align: left;
+}
+
+.autor {
+    color: rgb(221, 22, 39);
+    font-weight: bold;
+    margin-left: 1%;
+}
+
+.fecha {
+    color: rgb(221, 22, 39);
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 1%;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.negritacursiva {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*--------------- ESTILOS del FOOTER  -----------------------------------*/
+/*  al NO tener el '.' ANTES del Nombre hace que se APLIQUE en TODOS los FOOTERS */
+footer {
+    background-color: rgb(214, 247, 139);
+    text-align: center;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* ============== ESTILOS MOBILE ======================================*/
+/*--------------- ESTILOS del MAIN --------------------------------------*/
+/*------APLICABLES PARA "russ-ballard-uno.html"--------------------------------*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/*============== ESTILOS DESKTOP =========================================*/
+@media screen and (min-width:1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+}
+
+/*=============== ESTILOS PARA EL BOOTSTRAP con PSEUDOCLASES ===============*/
+
+.titulo-boot {
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+
+.texto-boot-negrita {
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    margin-bottom: 2%;
+}
+
+.texto-boot-parrafos {
+    font-size: large;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.imagen-boot {
+    margin-bottom: 2%;
+}
+
+.imagen-boot-logo {
+    width: 100%;
+}
