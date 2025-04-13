@@ -14,57 +14,61 @@
 
 <body>
     <!--NO ME ESTA TOMANDO EL COLOR DE FONDO del CSS-->
-    <header class="container-fluid">
-        <div class="row">
-            <div class="col-4">
-                <!--NO SE POR QUÉ SALE TAN PEQUEÑA. INCLUSO SI COLOCO 'col-12' TAMBIEN ME SALE PEQUEÑA
-                CON EL col-4  EL MENU APARECE EN LA FILA DE ABAJO, SI SUPUESTAMENTE LE ALCANZAN LAS COLUMNAS-->
-                <div class="imagen-boot-logo">
-                    <!--TAMPOCO PUEDO AGRANDAR EL LOGO CON ESA CLASS-->
-                    <img src="../img/logo-provisorio-sitio-uno.jpg" alt="logo del sitio web que se llama 'logonea' ">
-                </div>
-            </div>
-
-            <nav class="col">
-                <ul class="d-flex">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../pages/menu-peliculas-uno.html">Películas</a></li>
-                    <li><a href="../pages/menu-series-uno.html">Series</li>
-                    <li><a href="../pages/menu-musica-uno.html">Música</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    </div>
-
-    <h1 class="titulo-boot">
-        Adrián Suar desepciona con su película "No puedo vivir sin ti"
-    </h1>
-    <div class="text-center">
-        <img src="../img/no-puedo-vivir-sin-ti-uno.jpg" alt="adrian suar y paz vega en la presentacion de la pelicula">
-    </div>
-    <div class="text-center">
-        Fuente: <a href="https://www.aceprensa.com/" target="_blank">aceprensa.com </a>
-        <!-- con el target blank me abre esa pagina en una nueva pestaña-->
-    </div>
-    <p class="autor">
-        Pablo Zaklad
-    </p>
-    <p class="fecha">
-        25 de Marzo del 2025
-    </p>
-
-    <div class="texto-boot-negrita">
-        La película española que cuenta con el protagonismo del actor argentino Adrián Suar intenta
-        mostrar a través del humor, el constante uso del celular en la sociedad actual. Sin embargo,
-        la trama no termina de ser atractiva para el espectador, por lo que termina siendo una
-        película aburrida y monótona. </div>
     <div class="container-fluid">
+        <!--EL CONTAINER es UNO SOLO para TODA la PAGE !!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <header>
+            <!--El CONTAINER contiene a TODAS las ROW-->
+            <div class="row">
+                <!--Las ROW contienen a TODAS las COL
+            la ROW esta DIVIDIDA en 12 COLUMNAS-->
+                <div class="col-8">
+                    <!--NO SE POR QUÉ SALE TAN PEQUEÑA. 
+                SI COLOCO UN col-10 SE AGRANDA UN POCO PERO DESPLAZA EL MENU
+                 Y EN ALGUNOS CASOS  EN LA PANTALLA MOBILE EL MENU DESAPARECE-->
+                    <div class="imagen-boot-logo">
+                        <!--TAMPOCO PUEDO AGRANDAR EL LOGO CON ESA CLASS-->
+                        <img src="../img/logo-provisorio-sitio-uno.jpg"
+                            alt="logo del sitio web que se llama 'logonea' ">
+                    </div>
+                </div>
+                <nav class="col-4">
+                    <ul class="d-flex">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./menu-peliculas-uno.html">Películas</a></li>
+                        <li><a href="./menu-series-uno.html">Series</li>
+                        <li><a href="./menu-musica-uno.html">Música</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <h1 class="titulo-boot">
+            Adrián Suar desepciona con su película "No puedo vivir sin ti"
+        </h1>
+        <div class="text-center">
+            <img src="../img/no-puedo-vivir-sin-ti-uno.jpg"
+                alt="adrian suar y paz vega en la presentacion de la pelicula">
+        </div>
+        <div class="text-center">
+            Fuente: <a href="https://www.aceprensa.com/" target="_blank">aceprensa.com </a>
+            <!-- con el target blank me abre esa pagina en una nueva pestaña-->
+        </div>
+        <p class="autor">
+            Pablo Zaklad
+        </p>
+        <p class="fecha">
+            25 de Marzo del 2025
+        </p>
+
+        <div class="texto-boot-negrita">
+            La película española que cuenta con el protagonismo del actor argentino Adrián Suar intenta
+            mostrar a través del humor, el constante uso del celular en la sociedad actual. Sin embargo,
+            la trama no termina de ser atractiva para el espectador, por lo que termina siendo una
+            película aburrida y monótona. </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-6">
                 <div class="texto-boot-parrafos">
-
-
                     <p>
                         El actor y productor Adrián Suar de larga trayectoria, galardonado con 3 premios -<span
                             class="negrita">Martín
@@ -83,17 +87,16 @@
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col-6">
                 <div class="imagen-boot">
                     <img src="../img/no-puedo-vivir-sin-ti-suar-movil-fuente-diariodelapampa.jpg"
                         alt="Adrian Suar esta escondido debajo de su escritorio mirando su movil">
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid">
+
         <div class="row">
-            <div class="col-4">
+            <div class="col-6">
                 <div class="texto-boot-parrafos">
                     Carlos (Adrián Suar) es un empleado de una empresa de logística cuyo jefe Alejandro (Ramón
                     Barea)
@@ -113,7 +116,7 @@
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col-6">
                 <div class="imagen-boot">
                     <img src="../img/no-puedo-vivir-sin-ti-el-futbol-o-yo-fuente-idmb.jpg"
                         alt="Tapa de la pelicula 'El Futbol o Yo' protagonizada por Adrian Suar y Julieta Diaz">
@@ -121,21 +124,20 @@
             </div>
         </div>
     </div>
-    </div>
 
     <footer>
-        <div class="container-fluid">
-            <div class="text-center">
 
-
-                <p>Todos los derechos reservados 2025</p>
-                <p>Facebook</p>
-                <p>Instagram</p>
-                <p>Youtube</p>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <p>Todos los derechos reservados 2025</p>
+                    <p>Facebook</p>
+                    <p>Instagram</p>
+                    <p>Youtube</p>
+                </div>
             </div>
-
         </div>
-
+        </div>
     </footer>
 
 </body>

@@ -13,6 +13,14 @@ body {
     background-color: rgb(214, 200, 226);
 }
 
+img {
+    max-width: 100%;
+    /*ocupa el 100% del espacio destinado*/
+    /*que a su vez ese espacio destinado DEPENDE del tipo de pantalla que se este utilizando*/
+    /*por lo tanto esa linea de alguna manera es RESPONSIVE */
+    border-radius: 20px;
+}
+
 /*--------------- ESTILOS del HEADER -----------------------------------*/
 /* al NO tener el '.' ANTES del Nombre hace que se APLIQUE en TODOS los HEADERS */
 header {
@@ -30,22 +38,20 @@ header {
 header img {
     width: 15%;
     /* es el tamaño del logo */
+
 }
 
-.header-nav-ul {
+header nav ul {
+    /*al NO llevar el punto, este es una ETIQUETA y por lo tanto se aplica en TODOS los Headers */
     list-style: none;
-    /* NO LO HACE */
+    /* quita las viñetas*/
     color: black;
-    /* TAMPOCO LO HACE */
+    /*NO LO HACE. SIGUEN EN AZUL*/
     display: flex;
-    /*NO LO ESTA HACIENDO !!! DEBERIAN ESTAR EN LA MISMA FILA*/
-    gap: 15 px;
-    /* DEBERIA SEPARARME LAS PALABRAS PERO NO LO ESTA HACIENDO !!!!!!!! */
-    padding-right: 25px;
-    /* es la separacion de la ultima letra respecto del margen derecho*/
-    /*EL padding es el unico que me lo toma */
     flex-direction: row;
-    /*TAMPOCO LO HACE */
+    gap: 50px;
+    /*'MUSICA' queda muy separado de 'SERIES'*/
+    padding-right: 40px;
 }
 
 /*--------------- ESTILOS del MAIN --------------------------------------*/
@@ -62,35 +68,49 @@ main.textos {
 
 }
 
+
+
 section {
     /*Es la Etiqueta PADRE */
     display: flex;
-    padding: 20px;
+    padding-left: 0.8%;
     font-size: large;
 }
 
 section div {
     text-align: justify;
     align-content: center;
+
 }
 
 section div img {
     align-content: center;
     border-radius: 20px;
-    height: 80%;
+    padding-right: 0.8%;
+    /*height: 100%; */
+    /*width: auto;*/
+    /*NO LOGRO AGRANDAR LAS IMAGENES. He probado varias formas y no puedo conseguirlo 
+    SIEMPRE quedan de una alto igual al alto del parrafo. A mi me gustaria que tenga un alto superior 
+    a del parrafo, tal como sucede con las otras notas */
+
+
 }
 
 /*----------------------------------------------------------------------------------*/
 
 .imagen {
+    /* al SI llevar el '.' es una CLASE por lo que se aplica CADA vez que la llame */
     text-align: center;
+    border-radius: 20px;
 }
 
 /* Texto al lado de la imagen en el index */
 .titulo {
     text-align: center;
     color: black;
-    font: bold
+    font: bold;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .intro-a-la-nota {
@@ -98,6 +118,8 @@ section div img {
     font-style: italic;
     font-size: large;
     font-weight: bold;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .fuente-fuente {
@@ -107,19 +129,20 @@ section div img {
 
 .texto-de-la-nota {
     text-align: left;
+    padding-bottom: 1%;
 }
 
 .autor {
     color: rgb(221, 22, 39);
     font-weight: bold;
-    margin-left: 1%;
+    margin-left: 2.5%;
 }
 
 .fecha {
     color: rgb(221, 22, 39);
     font-weight: bold;
     font-style: italic;
-    margin-left: 1%;
+    margin-left: 2.5%;
 }
 
 .negrita {
@@ -141,27 +164,35 @@ footer {
     background-color: rgb(214, 247, 139);
     text-align: center;
     color: black;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /*PADDING = distancia que hay respecto a los margenes del contenedor */
+    /*MARGIN = distancia que hay respecto a los  marganes de la pantalla */
+    margin-bottom: 0px;
+    /*ME DEBERIA PONER EL FOOTER PEGADO A LA PARTE BAJA DE LA PANTALLA Y NO LO HACE */
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 /* ============== ESTILOS MOBILE ======================================*/
 /*--------------- ESTILOS del MAIN --------------------------------------*/
-/*------APLICABLES PARA "russ-ballard-uno.html"--------------------------------*/
+/*======= MOBILE PARA "russ-ballard.html" y "soda-stereo.thml" ===========*/
+
 .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    margin-left: 1%;
+
 }
 
-/*============== ESTILOS DESKTOP =========================================*/
+/*======= DESKTOP PARA "russ-ballard.html" y "soda-stereo.thml" ===========*/
 @media screen and (min-width:1024px) {
     .container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
     }
-
 }
+
+/*--------------------------------------------------------------------------*/
 
 /*=============== ESTILOS PARA EL BOOTSTRAP con PSEUDOCLASES ===============*/
 
@@ -180,19 +211,71 @@ footer {
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     margin-bottom: 2%;
+    margin-left: 2%;
 }
 
 .texto-boot-parrafos {
     font-size: large;
     text-align: justify;
     font-family: 'Times New Roman', Times, serif;
-
+    margin-left: 1%;
+    align-content: center;
+    /*DEBERIA QUEDAR EL TEXTO CENTRADO, ES DECIR, CON EL MISMO ESPACIO LIBRE
+    TANTO ARRIBA COMO ABAJO Y NO LO HACE */
 }
 
 .imagen-boot {
     margin-bottom: 2%;
+    width: 100%;
 }
 
 .imagen-boot-logo {
-    width: 100%;
+    /*width: 100%;*/
+    margin-left: 2%;
+}
+
+/*======= MOBILE PARA "adrian-suar.thml" ==========================*/
+/*NO ENTIENDO POR QUE NO FUNCIONAN ESTOS ESTILOS TANTO PARA MOBILE COMO PARA DESKTOP
+SI SON LAS MISMAS PROPIEDAS QUE PUSE LAS PAGES DE RUSS Y SODA QUE EN ESAS SE VEN BIEN EN AMBAS PANTALLAS */
+.container-fluid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 1%;
+
+}
+
+/*======= DESKTOP PARA "adrian-suar.html" ===========*/
+@media screen and (min-width:1024px) {
+    .container-fluid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+/*--------------------------------------------------------------------------*/
+
+/*=============== ESTILOS para el INDEX ===========================================*/
+.div-index-texto-e-imagen {
+    display: flex;
+    text-align: left;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-right: 2%;
+    align-content: center;
+}
+
+.h2-index-titulo {
+    margin-left: 2%;
+}
+
+.p-index-texto {
+    margin-left: 2%;
+    /*NO LO HACE. EL TEXTO SIGUE QUEDANDO EN LA PARTE DE ARRIBA*/
+}
+
+.imagen-index {
+    max-width: 1000%;
+    /*Este tamaño me gusta para la imagen pero SE PISA CON EL TEXTO.
+    NO SE CUAL ES EL MOTIVO si el tamaño esta en % y no el px */
 }
