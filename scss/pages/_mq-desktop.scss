@@ -1,0 +1,19 @@
+/*======= DESKTOP  ===========*/
+@media screen and (min-width:1024px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+/*======= DESKTOP ===========*/
+
+@media screen and (min-width:1024px) {
+    .container-fluid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}

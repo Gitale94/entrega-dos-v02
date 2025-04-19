@@ -4,100 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--LINK de BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- link de mi css -->
     <link rel="stylesheet" href="css/style.css">
     <title>Inicio</title>
 </head>
 
 <body>
-    <header class="imagen">
-        <img src="img/logo-provisorio-sitio-uno.jpg" alt="logo del sitio web que se llama 'logonea' ">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/menu-peliculas-uno.html">Películas</a></li>
-                <li><a href="pages/menu-series-uno.html">Series</li>
-                <li><a href="pages/menu-musica-uno.html">Música</a></li>
-            </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-$color-principal">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <img src="img/logonea-uno.jpg" alt="logo del sitio web que se llama logonea" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/menu-peliculas-uno.html">Películas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/menu-series-uno.html">Series</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/menu-musica-uno.html">Música</a>
+                        </li>
+                </div>
+            </div>
         </nav>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous"></script>
+        <!--Sentencia necesaria para que se produzca el despliegue del Menú Hamburguesa-->
     </header>
     <!-------------ADRIAN SUAR------------------------------------------------------------------------>
-    <div class="div-index-texto-e-imagen">
-        <!--Me gustaria que todo el texto esté a la misma altura que la imagen, pero no supe como realizarlo -->
-       <div> 
-        <img src="img/no-puedo-vivir-sin-ti-uno.jpg" class="imagen-index" alt="adrian suar y paz vega en la presentacion de la pelicula">
-    </div>
-    <div>
-        <h2 class="h2-index-titulo">
-            <a href="pages/adrian-suar-uno.html">Adrian Suar desepciona con su pelicula "No puedo vivir sin ti"</a>
-        </h2>
-        <p class="p-index-text">
-            La película española que cuenta con el protagonismo del actor argentino Adrián Suar intenta mostrar a través
-            del humor, el constante uso del celular en la sociedad actual. Sin embargo, la trama no termina de ser
-            atractiva para el espectador, por lo que termina siendo una película aburrida y monótona.
-        </p>
-    </div>
-    </div>
+    <section class="container">
+        <div class="imagen">
+            <!--Me gustaria que todo el texto esté a la misma altura que la imagen, pero no supe como realizarlo -->
+            <img src="img/no-puedo-vivir-sin-ti-uno.jpg" class="imagen-index"
+                alt="adrian suar y paz vega en la presentacion de la pelicula">
+        </div>
+
+        <div>
+            <h2 class="h2-index-titulo">
+                <a href="pages/adrian-suar-uno.html">Adrian Suar decepciona con su película "No puedo vivir sin ti"</a>
+            </h2>
+            <p class="p-index-text">
+                La película española que cuenta con el protagonismo del actor argentino Adrián Suar intenta mostrar a
+                través
+                del humor, el constante uso del celular en la sociedad actual. Sin embargo, la trama no termina de ser
+                atractiva para el espectador, por lo que termina siendo una película aburrida y monótona.
+            </p>
+        </div>
+    </section>
     <!------------ONLY MURDERS------------------------------------------------------------------------->
-    <div class="div-index-texto-e-imagen">
-       <div>
-        <img src="img/only-murders-in-the-building-uno.jpg"
-            alt="Los protagonistas de la serie Only Murders in the building: Steve Martin, Martin Short y Selena Gomez">
+    <section class="container">
+        <div class="imagen">
+            <img src="img/only-murders-in-the-building-uno.jpg"
+                alt="Los protagonistas de la serie Only Murders in the building: Steve Martin, Martin Short y Selena Gomez">
         </div>
         <div>
             <h2 class="h2-index-titulo">
-            <a href="pages/only-murders-uno.html">La 3ª temporada de "Only murders in the Building" será un exito</a>
-        </h2>
-        <p>
-            La serie producida y protagonizada por Steve Martin, Martin Short y Selena Gómez ha estrenado su tercera
-            temporada en la plataforma de Disney Plus y Hulu. Luego de 2 temporadas exitosas la tercera promete y mucho,
-            ya que a incorpora a dos actores de renombre que son Paul Rudd y Meryl Streep. Además, ya cuenta con 21
-            nominaciones a los premios Emmy y con un puntaje de 8,1/10 según la crítica de IDMb.
-        </p>
-    </div>
-    </div>
-    <!-------------RUSS BALLARD------------------------------------------------------------------------>
-    <div class="div-index-texto-e-imagen">
-        <div>
-        <img src="img/russ-ballard-guitarra-uno.jpg"
-            alt="Russ Ballard con su guitarra personalizada con agujeros, cantando en un escenario">
+                <a href="pages/only-murders-uno.html">La 3ª temporada de "Only murders in the Building" será un
+                    exito</a>
+            </h2>
+            <p>
+                La serie producida y protagonizada por Steve Martin, Martin Short y Selena Gómez ha estrenado su tercera
+                temporada en la plataforma de Disney Plus y Hulu. Luego de 2 temporadas exitosas la tercera promete y
+                mucho,
+                ya que a incorpora a dos actores de renombre que son Paul Rudd y Meryl Streep. Además, ya cuenta con 21
+                nominaciones a los premios Emmy y con un puntaje de 8,1/10 según la crítica de IDMb.
+            </p>
         </div>
-        <div>
-            <h2 class="h2-index-titulo">
-            <a href="pages/russ-ballard-uno.html">El Rock de Russ sigue ardiendo</a>
-        </h2>
-        <p>
-            Russell Glyn Ballard, más comúnmente conocido como Russ Ballard sigue en actividad a sus 77 años. Con un
-            2024 exitoso, ya planifica sus conciertos para el verano europeo del 2025. Su hit Hey Bernadette suena todas
-            las noches en las radios argentinas en el horario de los lentos. Mensualmente 80.000 fanáticos acceden a la
-            plataforma de Spotify para escuchar todos sus singles.
-        </p>
-    </div>
-    </div>
-    <!-------------SODA STEREO-------------------------------------------------------------------------->
-    <div class="div-index-texto-e-imagen">
-        <div>
-        <img src="img/soda-stereo-integrantes-uno.jpg" 
-            alt="Tapa del libro 'Soda stereo la biografia total'. En ella aparecen los 3 integrantes de la banda">
+    
+</section>
+        <!-------------RUSS BALLARD------------------------------------------------------------------------>
+        <section class="container">
+            <div class="imagen">
+                <img src="img/russ-ballard-guitarra-uno.jpg"
+                    alt="Russ Ballard con su guitarra personalizada con agujeros, cantando en un escenario">
+            </div>
+            <div>
+                <h2 class="h2-index-titulo">
+                    <a href="pages/russ-ballard-uno.html">El Rock de Russ sigue ardiendo</a>
+                </h2>
+                <p>
+                    Russell Glyn Ballard, más comúnmente conocido como Russ Ballard sigue en actividad a sus 77 años.
+                    Con un
+                    2024 exitoso, ya planifica sus conciertos para el verano europeo del 2025. Su hit Hey Bernadette
+                    suena todas
+                    las noches en las radios argentinas en el horario de los lentos. Mensualmente 80.000 fanáticos
+                    acceden a la
+                    plataforma de Spotify para escuchar todos sus singles.
+                </p>
+            </div>
         </div>
-        <div>
-            <h2 class="h2-index-titulo">
-            <a href="pages/soda-stereo-uno.html">Soda Stereo podría ingresar al Salón de la Fama del Rock and Roll</a>
-        </h2>
-        <p>
-            El periodista mexicano Miguel Gálvez creó una campaña online para que la banda argentina Soda Stereo sea
-            nominada al Salón de la Fama del Rock and Roll. Muchos artistas y fanáticos se han entusiasmado con la idea
-            y ya han dado su apoyo. La propuesta es única en el mundo, ya que hasta el momento ninguna banda
-            hispanoparlante ha conseguido entrar al Rock & Roll Hall of Fame.
-        </p>
-    </div>
-    </div>
-    <footer>
-        <p>Todos los derechos reservados 2025</p>
-        <p>Facebook</p>
-        <p>Instagram</p>
-        <p>Youtube</p>
-    </footer>
+    
+    </section>
+        <!-------------SODA STEREO-------------------------------------------------------------------------->
+        <section class="container">
+            <div class="imagen">
+                <img src="img/soda-stereo-integrantes-uno.jpg"
+                    alt="Tapa del libro 'Soda stereo la biografia total'. En ella aparecen los 3 integrantes de la banda">
+            </div>
+            <div>
+                <h2 class="h2-index-titulo">
+                    <a href="pages/soda-stereo-uno.html">Soda Stereo podría ingresar al Salón de la Fama del Rock and
+                        Roll</a>
+                </h2>
+                <p>
+                    El periodista mexicano Miguel Gálvez creó una campaña online para que la banda argentina Soda Stereo
+                    sea
+                    nominada al Salón de la Fama del Rock and Roll. Muchos artistas y fanáticos se han entusiasmado con
+                    la idea
+                    y ya han dado su apoyo. La propuesta es única en el mundo, ya que hasta el momento ninguna banda
+                    hispanoparlante ha conseguido entrar al Rock & Roll Hall of Fame.
+                </p>
+            </div>
+        </div>
+    
+    </section>
+        <footer>
+            <p>Todos los derechos reservados 2025</p>
+            <p>Facebook</p>
+            <p>Instagram</p>
+            <p>Youtube</p>
+        </footer>
 
 </body>
 

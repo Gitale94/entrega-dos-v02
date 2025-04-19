@@ -1,0 +1,53 @@
+/*======= TABLET ===========*/
+@media screen and (min-width:600px) {
+
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+/*======= TABLET  ===========*/
+
+@media screen and (min-width:600px) {
+    .container-fluid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+
+// PARA EL MENU HAMBURGUESA 
+
+/*
+
+ VER "https://mdbootstrap.com/docs/standard/extended/hamburger-menu/#section-basic"
+
+
+
+
+ <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <button data-mdb-button-init class="navbar-toggler" type="button" data-mdb-collapse-init
+      data-mdb-target="#navbarToggleExternalContent2" aria-controls="navbarToggleExternalContent2"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+<div class="collapse" id="navbarToggleExternalContent2">
+  <div class="bg-body-tertiary shadow-3 p-4">
+    <button data-mdb-button-init data-mdb-ripple-init
+      class="btn btn-link btn-block border-bottom m-0">Link 1</button>
+    <button data-mdb-button-init data-mdb-ripple-init
+      class="btn btn-link btn-block border-bottom m-0">Link 2</button>
+    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-block m-0">Link
+      3</button>
+  </div>
+</div>
+
+
+*/

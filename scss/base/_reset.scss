@@ -1,0 +1,25 @@
+// IMPORT VARIABLES
+@import "../abstracs/variables";
+
+/*RESET*/
+
+* {
+    /* El '*' hace que se aplique a TODOS los html linkeados a este CSS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*=============== ESTILOS GENERALES ===================================*/
+/* al NO tener el '.' ANTES del Nombre hace que se APLIQUE en TODOS los  BODYS */
+body {
+    background-color: $color-principal;
+}
+
+img {
+    max-width: 100%;
+    /*ocupa el 100% del espacio destinado*/
+    /*que a su vez ese espacio destinado DEPENDE del tipo de pantalla que se este utilizando*/
+    /*por lo tanto esa linea de alguna manera es RESPONSIVE */
+    border-radius: 20px;
+}

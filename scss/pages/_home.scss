@@ -1,0 +1,217 @@
+//MIXIN
+@import "../abstracs/mixin";
+// VARIABLES
+@import "../abstracs/variables";
+
+/* ESTILOS HEADER */
+header {
+    @include flex;
+
+    nav {
+        ul {
+            color: $color-tipografia;
+            list-style: none;
+            @include flex;
+            gap: 50 px;
+            flex-direction: row;
+            padding-right: 40px;
+
+
+
+        }
+    }
+}
+
+/*--------------- ESTILOS del MAIN --------------------------------------*/
+/*------APLICABLES PARA "only-murders-uno.html"--------------------------------*/
+main {
+    flex-wrap: wrap;
+    /*asi se adapta a pantallas pequeñas */
+    margin-top: 1.5%;
+}
+
+main.textos {
+    text-align: center;
+
+
+}
+
+
+
+section {
+    /*Es la Etiqueta PADRE */
+    display: flex;
+    padding-left: 0.8%;
+    font-size: large;
+}
+
+section div {
+    text-align: justify;
+    align-content: center;
+
+}
+
+section div img {
+    align-content: center;
+    border-radius: 20px;
+    padding-right: 0.8%;
+    /*height: 100%; */
+    /*width: auto;*/
+
+
+
+}
+
+/*----------------------------------------------------------------------------------*/
+
+.imagen {
+    /* al SI llevar el '.' es una CLASE por lo que se aplica CADA vez que la llame */
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* Texto al lado de la imagen en el index */
+.titulo {
+    text-align: center;
+    color: black;
+    font: bold;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.intro-a-la-nota {
+    text-align: center;
+    font-style: italic;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.fuente-fuente {
+    text-align: center;
+    font-size: small;
+}
+
+.texto-de-la-nota {
+    text-align: left;
+    padding-bottom: 1%;
+}
+
+.autor {
+    color: rgb(221, 22, 39);
+    font-weight: bold;
+    margin-left: 2.5%;
+}
+
+.fecha {
+    color: rgb(221, 22, 39);
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 2.5%;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.negritacursiva {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*--------------- ESTILOS del FOOTER  -----------------------------------*/
+/*  al NO tener el '.' ANTES del Nombre hace que se APLIQUE en TODOS los FOOTERS */
+footer {
+    background-color: rgb(214, 247, 139);
+    text-align: center;
+    color: $color-tipografia;
+    /*PADDING = distancia que hay respecto a los margenes del contenedor */
+    /*MARGIN = distancia que hay respecto a los  marganes de la pantalla */
+    margin-bottom: 0px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 1%;
+
+}
+
+/*=============== ESTILOS PARA EL BOOTSTRAP con PSEUDOCLASES ===============*/
+
+.titulo-boot {
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+
+.texto-boot-negrita {
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+.texto-boot-parrafos {
+    font-size: large;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 1%;
+    align-content: center;
+
+
+    .imagen-boot {
+        margin-bottom: 2%;
+        width: 100%;
+    }
+
+    .imagen-boot-logo {
+        /*width: 100%;*/
+        margin-left: 2%;
+    }
+
+
+
+    .container-fluid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 1%;
+
+    }
+
+
+    /*=============== ESTILOS para el INDEX ===========================================*/
+    .div-index-texto-e-imagen {
+        display: flex;
+        text-align: left;
+        margin-left: 1%;
+        margin-top: 1%;
+        margin-right: 2%;
+        align-content: center;
+    }
+
+    .h2-index-titulo {
+        margin-left: 2%;
+    }
+
+    .p-index-texto {
+        margin-left: 2%;
+
+    }
+
+    .imagen-index {
+        max-width: 1000%;
+    }
+}
