@@ -3,6 +3,8 @@
 * {
   /* El '*' hace que se aplique a TODOS los html linkeados a este CSS */
   margin: 0;
+  /*NO SE SI LO APLICA PORQUE NO ME PONE LAS IMAGENES PEGADAS AL BORDE???
+  O DONDE ESTOY PONIENDO UN MARGIN????? */
   padding: 0;
   box-sizing: border-box;
 }
@@ -11,24 +13,29 @@
 /* al NO tener el '.' ANTES del Nombre hace que se APLIQUE en TODOS los  BODYS */
 body {
   background-color: rgb(214, 200, 226);
+  font-family: "Times New Roman", Times, serif;
 }
 
-img {
-  max-width: 100%;
-  /*ocupa el 100% del espacio destinado*/
-  /*que a su vez ese espacio destinado DEPENDE del tipo de pantalla que se este utilizando*/
-  /*por lo tanto esa linea de alguna manera es RESPONSIVE */
-  border-radius: 20px;
-}
+/*img {
+    max-width: 100%;
+    /*ocupa el 100% del espacio destinado*/
+/*que a su vez ese espacio destinado DEPENDE del tipo de pantalla que se este utilizando*/
+/*por lo tanto esa linea de alguna manera es RESPONSIVE */
+/*  border-radius: 20px;
 
+
+
+}*/
 /* ESTILOS HEADER */
 header {
   display: flex;
   /* coloca el menu al lado del logo */
   justify-content: space-between;
   /* el logo va a la izquierda y el menu a la derecha */
-  align-items: center;
+  align-items: left;
   /* centra el contenido del menu, sino se "pega" al borde de arriba */
+  padding-right: 0;
+  margin-right: 0;
 }
 header nav ul {
   color: black;
@@ -37,11 +44,21 @@ header nav ul {
   /* coloca el menu al lado del logo */
   justify-content: space-between;
   /* el logo va a la izquierda y el menu a la derecha */
-  align-items: center;
+  align-items: left;
   /* centra el contenido del menu, sino se "pega" al borde de arriba */
-  gap: 50 px;
+  padding-right: 0;
+  margin-right: 0;
+  gap: 20px;
+  /*es la separacion entre las palabras del menú. Mientras mayor sea este valor, se va achicando la imagen del logo */
   flex-direction: row;
   padding-right: 40px;
+  /*distancia que se aleja la ultima palabra del menu respecto del borde derecho de la pagina */
+}
+
+body header nav div img {
+  /*este estilo SOLO lo aplica en la ruta 'body header nav div img', es decir que se aplica SOLO en la imagen del Logo */
+  max-width: 100%;
+  border-radius: 10px;
 }
 
 /*--------------- ESTILOS del MAIN --------------------------------------*/
@@ -59,21 +76,43 @@ main.textos {
 section {
   /*Es la Etiqueta PADRE */
   display: flex;
-  padding-left: 0.8%;
+  /* padding-left: 0.8%; 
+  /* padding-right: 0.2%; */
   font-size: large;
 }
 
-section div {
+section div p {
   text-align: justify;
   align-content: center;
+  padding-right: 20px;
+  /* se ve en la version mobile y es solo para los cuadros de textos */
+  padding-left: 20px;
+}
+
+section div h1 {
+  padding-left: 20px;
+}
+
+section div h2 {
+  padding-left: 20px;
 }
 
 section div img {
+  /*se aplicar en TODOS los 'img' que hay dentro de un'section' y luego de un 'div' SIN IMPORTAR si estoy 'llamando' a otra clase */
   align-content: center;
   border-radius: 20px;
-  padding-right: 0.8%;
+  padding-right: 10px;
+  /* ME RECORTA UN POCO EL border-radius PERO ELIJO ESTE YA QUE EL margin-right NO LO ESTA TOMANDO */
+  /*margin-right: 20px; */
+  margin-left: 10px;
+  padding-left: 2px;
+  /*NO usar padding porque sino me corta el border-radius */
   /*height: 100%; */
   /*width: auto;*/
+  max-width: 100%;
+  margin-right: 2%;
+  margin-top: 4%;
+  margin-bottom: 1%;
 }
 
 /*----------------------------------------------------------------------------------*/
@@ -109,6 +148,8 @@ section div img {
 .texto-de-la-nota {
   text-align: left;
   padding-bottom: 1%;
+  padding-right: 0px;
+  margin-right: 0px;
 }
 
 .autor {
@@ -156,6 +197,25 @@ footer {
   margin-left: 1%;
 }
 
+div ul li {
+  /* SOLO se aplica en esa ubicacion que corresponde a las palabras del menu */
+  font-weight: bold;
+  font-size: x-large;
+}
+
+div img {
+  border-radius: 20px;
+  max-width: 100%;
+  align-content: center;
+  border-radius: 20px;
+  padding-right: 10px;
+  /* ME RECORTA UN POCO EL border-radius PERO ELIJO ESTE YA QUE EL margin-right NO LO ESTA TOMANDO */
+  margin-left: 10px;
+  padding-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 1%;
+}
+
 /*=============== ESTILOS PARA EL BOOTSTRAP con PSEUDOCLASES ===============*/
 .titulo-boot {
   text-align: center;
@@ -179,7 +239,7 @@ footer {
   text-align: justify;
   font-family: "Times New Roman", Times, serif;
   margin-left: 1%;
-  align-content: center;
+  /*align-content: center;*/
   /*=============== ESTILOS para el INDEX ===========================================*/
 }
 .texto-boot-parrafos .imagen-boot {
@@ -210,7 +270,7 @@ footer {
   margin-left: 2%;
 }
 .texto-boot-parrafos .imagen-index {
-  max-width: 1000%;
+  max-width: 100%;
 }
 
 /*======= TABLET ===========*/
@@ -264,6 +324,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    margin-right: 0px;
   }
 }
 /*======= DESKTOP ===========*/

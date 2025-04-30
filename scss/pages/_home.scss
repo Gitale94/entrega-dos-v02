@@ -12,14 +12,23 @@ header {
             color: $color-tipografia;
             list-style: none;
             @include flex;
-            gap: 50 px;
+            gap: 20px;
+            /*es la separacion entre las palabras del menú. Mientras mayor sea este valor, se va achicando la imagen del logo */
             flex-direction: row;
             padding-right: 40px;
+            /*distancia que se aleja la ultima palabra del menu respecto del borde derecho de la pagina */
 
 
 
         }
     }
+}
+
+body header nav div img {
+    /*este estilo SOLO lo aplica en la ruta 'body header nav div img', es decir que se aplica SOLO en la imagen del Logo */
+    max-width: 100%;
+    border-radius: 10px;
+
 }
 
 /*--------------- ESTILOS del MAIN --------------------------------------*/
@@ -41,22 +50,46 @@ main.textos {
 section {
     /*Es la Etiqueta PADRE */
     display: flex;
-    padding-left: 0.8%;
+    /* padding-left: 0.8%; 
+    /* padding-right: 0.2%; */
     font-size: large;
 }
 
-section div {
+section div p {
     text-align: justify;
     align-content: center;
+    padding-right: 20px;
+    /* se ve en la version mobile y es solo para los cuadros de textos */
+    padding-left: 20px;
+
 
 }
 
+section div h1 {
+    padding-left: 20px;
+}
+
+section div h2 {
+    padding-left: 20px;
+}
+
 section div img {
+    /*se aplicar en TODOS los 'img' que hay dentro de un'section' y luego de un 'div' SIN IMPORTAR si estoy 'llamando' a otra clase */
     align-content: center;
     border-radius: 20px;
-    padding-right: 0.8%;
+    padding-right: 10px;
+    /* ME RECORTA UN POCO EL border-radius PERO ELIJO ESTE YA QUE EL margin-right NO LO ESTA TOMANDO */
+
+    /*margin-right: 20px; */
+    margin-left: 10px;
+    padding-left: 2px;
+    /*NO usar padding porque sino me corta el border-radius */
     /*height: 100%; */
     /*width: auto;*/
+    max-width: 100%;
+    margin-right: 2%;
+    margin-top: 4%;
+    margin-bottom: 1%;
 
 
 
@@ -68,7 +101,9 @@ section div img {
     /* al SI llevar el '.' es una CLASE por lo que se aplica CADA vez que la llame */
     text-align: center;
     border-radius: 20px;
+
 }
+
 
 /* Texto al lado de la imagen en el index */
 .titulo {
@@ -96,6 +131,10 @@ section div img {
 .texto-de-la-nota {
     text-align: left;
     padding-bottom: 1%;
+    padding-right: 0px;
+    margin-right: 0px;
+
+
 }
 
 .autor {
@@ -142,7 +181,28 @@ footer {
     grid-template-columns: repeat(1, 1fr);
     margin-left: 1%;
 
+
 }
+
+div ul li {
+    /* SOLO se aplica en esa ubicacion que corresponde a las palabras del menu */
+    font-weight: bold;
+    font-size: x-large;
+}
+
+div img {
+    border-radius: 20px;
+    max-width: 100%;
+    align-content: center;
+    border-radius: 20px;
+    padding-right: 10px;
+    /* ME RECORTA UN POCO EL border-radius PERO ELIJO ESTE YA QUE EL margin-right NO LO ESTA TOMANDO */
+    margin-left: 10px;
+    padding-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 1%;
+}
+
 
 /*=============== ESTILOS PARA EL BOOTSTRAP con PSEUDOCLASES ===============*/
 
@@ -169,7 +229,7 @@ footer {
     text-align: justify;
     font-family: 'Times New Roman', Times, serif;
     margin-left: 1%;
-    align-content: center;
+    /*align-content: center;*/
 
 
     .imagen-boot {
@@ -212,6 +272,6 @@ footer {
     }
 
     .imagen-index {
-        max-width: 1000%;
+        max-width: 100%;
     }
 }

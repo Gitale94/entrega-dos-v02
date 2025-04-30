@@ -4,8 +4,10 @@
     /* coloca el menu al lado del logo */
     justify-content: space-between;
     /* el logo va a la izquierda y el menu a la derecha */
-    align-items: center;
+    align-items: left;
     /* centra el contenido del menu, sino se "pega" al borde de arriba */
+    padding-right: 0;
+    margin-right: 0;
 
 
 }
@@ -16,4 +18,6 @@
     grid-template-columns: $column;
     grid-template-rows: $row;
     gap: 1rem;
+    /*gap es la separacion entre filas y columnas de los espacios interiores y NO es respecto al borde exterior*/
+    margin-right: 0px;
 }
